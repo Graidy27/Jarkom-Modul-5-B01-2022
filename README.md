@@ -54,6 +54,7 @@ Untuk menjaga perdamaian dunia, Loid ingin meminta kalian untuk membuat topologi
 ### 1. Jumlah Alamat IP
 Subnet serta jumlah IP untuk mendapatkan netmask dari tiap subnet ditunjukkan oleh tabel berikut :
 | Subnet  | Jumlah IP | Netmask | subnetmask | nid |
+| :---         |     :---:      |     :---:      |     :---:      |          ---: |
 | A1  | 2 | /30 | 255.255.255.252 | 192.173.0.0 |
 | A2  | 2 | /30 | 255.255.255.252 | 192.173.0.4 |
 | A3  | 201 | /24 | 255.255.255.0 | 192.173.1.0 |
