@@ -48,7 +48,7 @@ Subnetting: <br/>
 
 <br/>
 <br/>
-VLSM Tree:<br/>
+VLSM Tree: <br/><br/>
 ![image](pics/VLSMTree_M5.png)
 <br/>
 
