@@ -26,8 +26,7 @@ Anggota :
 
 ## A
 ### Soal
-Tugas pertama kalian yaitu membuat topologi jaringan sesuai dengan rancangan yang diberikan Loid. <\br>
-Keterangan :	<\br>
+Tugas pertama kalian yaitu membuat topologi jaringan sesuai dengan rancangan yang diberikan Loid. Keterangan :
 - Eden adalah DNS Server
 - WISE adalah DHCP Server
 - Garden dan SSS adalah Web Server
@@ -43,7 +42,7 @@ Keterangan :	<\br>
 Untuk menjaga perdamaian dunia, Loid ingin meminta kalian untuk membuat topologi tersebut menggunakan teknik CIDR atau VLSM setelah melakukan subnetting.
 
 ### Penyelesaian
-Menggunakan VLSM <\br>
+Menggunakan VLSM
 
 ## C
 ### Soal
@@ -53,7 +52,7 @@ Anya, putri pertama Loid, juga berpesan kepada anda agar melakukan Routing agar 
 
 ## D
 ### Soal
-Tugas berikutnya adalah memberikan ip pada subnet Forger, Desmond, Blackbell, dan Briar secara dinamis menggunakan bantuan DHCP server. Kemudian kalian ingat bahwa kalian harus setting DHCP Relay pada router yang menghubungkannya.
+Tugas berikutnya adalah memberikan ip pada subnet Forger, Desmond, Blackbell, dan briar secara dinamis menggunakan bantuan DHCP server. Kemudian kalian ingat bahwa kalian harus setting DHCP Relay pada router yang menghubungkannya.
 
 ### Penyelesaian
 
