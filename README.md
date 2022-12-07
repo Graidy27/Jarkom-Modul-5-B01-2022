@@ -43,12 +43,10 @@ Tugas pertama kalian yaitu membuat topologi jaringan sesuai dengan rancangan yan
 Untuk menjaga perdamaian dunia, Loid ingin meminta kalian untuk membuat topologi tersebut menggunakan teknik CIDR atau VLSM setelah melakukan subnetting.
 
 ### Penyelesaian
-Subnetting: <br/>
+- Subnetting: <br/>
 ![image](pics/Subnetting_M5.png)
 
-<br/>
-<br/>
-VLSM Tree: <br/><br/>
+- VLSM Tree: <br/>
 ![image](pics/VLSMTree_M5.png)
 <br/>
 
