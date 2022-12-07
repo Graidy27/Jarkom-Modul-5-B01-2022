@@ -3,7 +3,7 @@
 Anggota :
 > Ichsanul Aulia - 05111840007001\
 > Alfin Indrawan - 5025201199\
-> Graidy Megananda - 5025201188
+> Graidy Megananda - 5025201188\
 
 ---
 ## Tabel Konten
