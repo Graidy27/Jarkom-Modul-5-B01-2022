@@ -50,17 +50,195 @@ Untuk menjaga perdamaian dunia, Loid ingin meminta kalian untuk membuat topologi
 ![image](pics/VLSMTree_M5.png)
 <br/>
 
+- Pembagian IP :
+### 1. Jumlah Alamat IP
+Subnet serta jumlah IP untuk mendapatkan netmask dari tiap subnet ditunjukkan oleh tabel berikut :
+| Subnet  | Jumlah IP | Netmask | subnetmask | nid |
+| A1  | 2 | /30 | 255.255.255.252 | 192.173.0.0 |
+| A2  | 2 | /30 | 255.255.255.252 | 192.173.0.4 |
+| A3  | 201 | /24 | 255.255.255.0 | 192.173.1.0 |
+| A4  | 301 | /23 | 255.255.254.0 | 192.173.2.0 |
+| A5  | 101 | /25 | 255.255.255.128 | 192.173.0.128 |
+| A6  | 701 | /22 | 255.255.252.0	 | 192.173.4.0 |
+| A7  | 4 | /29 | 255.255.255.248 | 192.173.0.16 |
+| A8  | 4 | /29 | 255.255.255.248 | 192.173.0.24 |
+| Total  | 1361 | /21 | 255.255.248.0 | - |
+
+SETTING INTERFACE PADA GNS3
+
+- Strix
+
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+        address 192.173.0.1
+        netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+         address 192.173.0.5
+         netmask 255.255.255.252
+```
+
+- Westalis
+
+```
+auto eth0
+iface eth0 inet static
+        address 192.173.0.2
+        netmask 255.255.255.252
+        gateway 192.173.0.1
+
+auto eth1
+iface eth1 inet static
+        address 192.173.0.17
+        netmask 255.255.255.248
+
+auto eth2
+iface eth2 inet static
+         address 192.173.0.129
+         netmask 255.255.255.128
+
+auto eth3
+iface eth3 inet static
+         address 192.173.4.1
+         netmask 255.255.252.0
+```
+
+- Ostania
+
+```
+auto eth0
+iface eth0 inet static
+          address 192.173.0.6
+          netmask 255.255.255.252
+          gateway 192.173.0.5
+
+auto eth1
+iface eth1 inet static
+          address 192.173.0.25
+          netmask 255.255.255.248
+
+auto eth2
+iface eth2 inet static
+          address 192.173.1.1
+          netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+           address 192.173.2.1
+          netmask 255.255.254.0
+```
+
+- Forger
+
+```
+auto eth0
+iface eth0 inet static
+      address 192.173.0.130
+      netmask 255.255.255.128
+      gateway 192.173.0.129
+```
+
+- Desmond
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.4.2
+      netmask 255.255.252.0
+       gateway 192.173.4.1
+```
+
+- Blackbell
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.2.2
+       netmask 255.255.254.0
+       gateway 192.173.2.1
+```
+
+- Briar
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.1.2
+       netmask 255.255.255.0
+       gateway 192.173.1.1
+```
+
+- SSS
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.0.27
+       netmask 255.255.255.248
+       gateway 192.173.0.25
+```
+
+- Garden
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.0.26
+       netmask 255.255.255.248
+       gateway 192.173.0.25
+```
+
+- Eden
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.0.18
+       netmask 255.255.255.248
+       gateway 192.173.0.17
+```
+
+- Wise
+
+```
+auto eth0
+iface eth0 inet static
+       address 192.173.0.19
+       netmask 255.255.255.248
+       gateway 192.173.0.17
+
 ## C
 ### Soal
 Anya, putri pertama Loid, juga berpesan kepada anda agar melakukan Routing agar setiap perangkat pada jaringan tersebut dapat terhubung.
 
 ### Penyelesaian
+```
+route add -net 192.173.1.0 netmask 255.255.255.0 gw 192.173.0.6                                     
+route add -net 192.173.2.0 netmask 255.255.254.0 gw 192.173.0.6                                   
+route add -net 192.173.0.24 netmask 255.255.255.248 gw 192.173.0.6                                    
+route add -net 192.173.4.0 netmask 255.255.252.0 gw 192.173.0.2                                         
+route add -net 192.173.0.128 netmask 255.255.255.128 gw 192.173.0.2                                 
+route add -net 192.173.0.16 netmask 255.255.255.248 gw 192.173.0.2 
+```
 
 ## D
 ### Soal
 Tugas berikutnya adalah memberikan ip pada subnet Forger, Desmond, Blackbell, dan briar secara dinamis menggunakan bantuan DHCP server. Kemudian kalian ingat bahwa kalian harus setting DHCP Relay pada router yang menghubungkannya.
 
 ### Penyelesaian
+1. Install `apt-get install isc-dhcp-relay -y` pada strix, westalis, dan Ostania, `apt-get install isc-dhcp-server` pada Wise
+2. Pada Router (strix, westalis dan Ostania) Edit file `/etc/sysctl.conf` deengan command
+    ```
+    net.ipv4.ip_forward=1
+    net.ipv4.conf.all.accept_source_route = 1
+    ```
+3. Lakukan sysctl -p
+
 
 ## Nomor 1
 ### Soal
