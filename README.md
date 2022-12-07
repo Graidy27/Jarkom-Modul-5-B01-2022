@@ -212,6 +212,7 @@ iface eth0 inet static
        address 192.173.0.19
        netmask 255.255.255.248
        gateway 192.173.0.17
+```
 
 ## C
 ### Soal
