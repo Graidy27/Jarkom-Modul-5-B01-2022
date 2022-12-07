@@ -8,29 +8,37 @@ Anggota :
 ---
 ## Tabel Konten
 - [Pembagian tugas](#pembagian-tugas)
+- [Soal A](#A)
+- [Soal B](#B)
+- [Soal C](#C)
+- [Soal D](#D)
 - [Soal 1](#nomor-1)
 - [Soal 2](#nomor-2)
 - [Soal 3](#nomor-3)
 - [Soal 4](#nomor-4)
 - [Soal 5](#nomor-5)
 - [Soal 6](#nomor-6)
-- [Soal 7](#nomor-7)
-- [Soal 8](#nomor-8)
-- [Soal 9](#nomor-9)
-- [Soal 10](#nomor-10)
-- [Soal 11](#nomor-11)
-- [Soal 12](#nomor-12)
-- [Soal 13](#nomor-13)
-- [Soal 14](#nomor-14)
-- [Soal 15](#nomor-15)
-- [Soal 16](#nomor-16)
-- [Soal 17](#nomor-17)
-- [Kesulitan](#kesulitan)
 
 ## Pembagian Tugas
-> Ichsanul Aulia - 7 hingga 11\
-> Alfin Indrawan - 1 hingga 6\
-> Graidy Megananda - 12 hingga
+> Ichsanul Aulia
+> Alfin Indrawan
+> Graidy Megananda
+
+##A
+### Soal
+### Penyelesaian
+
+##B
+### Soal
+### Penyelesaian
+
+##C
+### Soal
+### Penyelesaian
+
+##D
+### Soal
+### Penyelesaian
 
 ## Nomor 1
 ### Soal
